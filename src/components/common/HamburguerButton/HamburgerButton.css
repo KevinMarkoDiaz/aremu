@@ -1,0 +1,25 @@
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px; /* Ancho del botón */
+    height: 25px; /* Altura total */
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px; /* Grosor de las barras */
+    transition: all 0.3s ease; /* Transiciones suaves */
+}
+
+.bar.open:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px); /* Rotar la primera barra */
+}
+
+.bar.open:nth-child(2) {
+    opacity: 0; /* Ocultar la segunda barra */
+}
+
+.bar.open:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px); /* Rotar la tercera barra */
+}
