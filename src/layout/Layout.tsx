@@ -3,8 +3,11 @@ import Navbar from "../components/navbar/Navbar";
 import { Link } from "react-router-dom";
 import { FaInstagram, FaFacebook } from "react-icons/fa";
 import LOGO from "../assets/icono-1.png";
+import LOGO_FOOTER from "../assets/logo-3.png";
+
 import "./Layout.css";
 import HamburgerButton from "../components/common/HamburguerButton/HamburguerButton";
+import Footer from "../components/footer/Footer";
 
 const Layout = ({ children }: any) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -78,12 +81,12 @@ const Layout = ({ children }: any) => {
             }`}
           >
             <ul className="flex gap-8 text-xl	">
-              <li className=" ">
+              <li>
                 <a href="https://www.instagram.com/supercolombianafood/ ">
                   <FaInstagram />
                 </a>
               </li>
-              <li className=" ">
+              <li>
                 <a href="https://www.instagram.com/supercolombianafood/">
                   <FaFacebook />
                 </a>
@@ -94,6 +97,44 @@ const Layout = ({ children }: any) => {
       </div>
 
       {children}
+      <Footer
+        classname={
+          "bg-[#006829] text-white w-full p-6 md:px-16 flex md:flex-col justify-between md:gap-8"
+        }
+      >
+        <Footer.Nav classname={"md:order-2"}>
+          <ul className="flex h-full md:flex gap-2 flex-col text-nowrap text-left">
+            <li>
+              <Link to="/products">Productos</Link>
+            </li>
+            <li className="">
+              <Link to="/about">Nuestra Historia</Link>
+            </li>
+            <li className="">
+              <Link to="/contact">Contactanos</Link>
+            </li>
+          </ul>
+        </Footer.Nav>
+        <div className="flex justify-between flex-col">
+          <Footer.Brand classname={"flex justify-center"}>
+            <img className="w-2/4 md:w-2/12" src={LOGO_FOOTER} alt="logo" />
+          </Footer.Brand>
+          <Footer.ScMedia classname={"flex flex-col "}>
+            <ul className="flex gap-8 text-lg 	max-md:justify-center">
+              <li>
+                <a href="https://www.instagram.com/supercolombianafood/ ">
+                  <FaInstagram />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/supercolombianafood/">
+                  <FaFacebook />
+                </a>
+              </li>
+            </ul>
+          </Footer.ScMedia>
+        </div>
+      </Footer>
     </div>
   );
 };

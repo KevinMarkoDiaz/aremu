@@ -4,7 +4,9 @@ import FooterDescription from "./subcomponets/FooterDescription";
 import FooterNav from "./subcomponets/FooterNav";
 import FooterScMedia from "./subcomponets/FooterScMedia";
 
-const Footer = ({ children }: any) => {};
+const Footer = ({ children, classname }: any) => {
+  return <footer className={classname}>{children}</footer>;
+};
 
 Footer.Brand = FooterBrand;
 Footer.Description = FooterDescription;
