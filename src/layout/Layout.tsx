@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/navbar/Navbar";
 import { Link } from "react-router-dom";
 import { FaInstagram, FaFacebook } from "react-icons/fa";
@@ -11,6 +11,21 @@ import Footer from "../components/footer/Footer";
 
 const Layout = ({ children }: any) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+
+  useEffect(() => {
+    if (isNavOpen) {
+      // Bloquear el scroll
+      document.body.style.overflow = "hidden";
+    } else {
+      // Restaurar el scroll
+      document.body.style.overflow = "auto";
+    }
+
+    // Limpiar el estilo al desmontar el componente
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isNavOpen]);
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
   };
@@ -19,12 +34,12 @@ const Layout = ({ children }: any) => {
       <div className="poppins">
         <Navbar
           id="header"
-          classname={` fixed p-6 md:px-6 md:px-14 flex-col	 z-10 text-black  grid-cols-3 md:grid-cols-3 flex justify-between md:grid gap-20 h-28 items-center w-screen transition-all duration-400  ease-in-out  ${
+          classname={` absolute p-6 md:px-6 md:px-14 flex-col	 z-10 text-black  grid-cols-3 md:grid-cols-3 flex justify-between md:grid gap-20 h-28 items-center w-screen transition-all duration-400  ease-in-out  ${
             isNavOpen ? "h-dvh bg-[#94c11f] text-[#006829]" : ""
           }`}
         >
           <div className="flex justify-between w-full 	md:order-2 ">
-            <Link to="/">
+            <Link to="/home">
               <Navbar.Brand classname={"h-10 col-span-3 col-start-5 flex "}>
                 <span className=" uppercase font-black leading-10 text-2xl mulish">
                   AREMU
@@ -49,14 +64,25 @@ const Layout = ({ children }: any) => {
                 <li className=" flex justify-center">
                   <img className="w-2/4" src={LOGO} alt="" />
                 </li>
-                <li className="">
-                  <Link to="/">Productos</Link>
+                <li>
+                  <Link to="/home" onClick={toggleNav}>
+                    Home
+                  </Link>
                 </li>
-                <li className="">
-                  <Link to="/contact">Nuestra historia</Link>
+                <li>
+                  <Link to="/products" onClick={toggleNav}>
+                    Productos
+                  </Link>
                 </li>
-                <li className="">
-                  <Link to="/about">Contactanos</Link>
+                <li>
+                  <Link to="/about" onClick={toggleNav}>
+                    Nuestra historia
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/contact" onClick={toggleNav}>
+                    Contactanos
+                  </Link>
                 </li>
               </ul>
             ) : (
@@ -107,10 +133,10 @@ const Layout = ({ children }: any) => {
             <li>
               <Link to="/products">Productos</Link>
             </li>
-            <li className="">
+            <li>
               <Link to="/about">Nuestra Historia</Link>
             </li>
-            <li className="">
+            <li>
               <Link to="/contact">Contactanos</Link>
             </li>
           </ul>

@@ -31,7 +31,7 @@ const ContactForm: React.FC = () => {
     <form
       action="https://formsubmit.co/devcontact.studio@gmail.com"
       method="POST"
-      className="gap-2 flex flex-col md:w-1/3"
+      className="gap-2 flex flex-col md:w-1/3 self-center"
     >
       <div className="flex gap-2 flex-col lg:flex-row">
         <div className="flex flex-col">
