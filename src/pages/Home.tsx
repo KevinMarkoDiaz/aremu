@@ -10,6 +10,7 @@ import AD_QUESO from "../assets/ADQueso.jpg";
 import A_PAISA from "../assets/APaisa.jpg";
 import E_QUESO from "../assets/EQueso.jpg";
 import LQIPImage from "../components/common/LQIPImage";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -25,7 +26,7 @@ const Home = () => {
           lowRes={BANNER_AREPA_LQ}
           highRes={BANNER_AREPA}
           alt="banner"
-          classnames=" h-dvh w-full object-cover md:hidden"
+          classnames=" h-fit w-full object-cover md:hidden"
         />
       </div>
       <div className="p-8 grid gap-8 items-center">
@@ -59,9 +60,12 @@ const Home = () => {
             alt="banner"
           ></img>
         </div>
-        <button className="bg-[#94c11f] text-white justify-self-center font-semibold p-4 w-fit">
+        <Link
+          to="/contact"
+          className="bg-[#94c11f] text-white justify-self-center font-semibold p-4 w-fit"
+        >
           Comprar ahora
-        </button>
+        </Link>
       </div>
     </div>
   );

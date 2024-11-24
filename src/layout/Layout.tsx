@@ -38,7 +38,7 @@ const Layout = ({ children }: any) => {
       <div className="poppins">
         <Navbar
           id="header"
-          classname={` absolute p-6 md:px-6 md:px-14 flex-col	 z-10 text-black  grid-cols-3 md:grid-cols-6 flex justify-between md:grid gap-20 h-28 items-center  transition-all duration-400  ease-in-out  ${
+          classname={` absolute p-6 md:px-6 md:px-14 flex-col	 z-10 text-black  grid-cols-3 md:grid-cols-6 flex justify-between md:grid gap-20 h-28 items-center w-full transition-all duration-400  ease-in-out  ${
             isNavOpen ? "h-dvh bg-[#94c11f] text-[#006829]" : ""
           }`}
         >

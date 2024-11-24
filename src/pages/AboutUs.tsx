@@ -8,7 +8,7 @@ const AboutUs = () => {
   return (
     <div className="flex max-md:flex-col md:min-h-screen">
       <LQIPImage
-        classnames="max-md:h-dvh md:w-2/5 object-cover "
+        classnames="max-md:h-fit md:w-2/5 object-cover "
         lowRes={BANNER_LQ}
         highRes={BANNER}
         alt="banner"
