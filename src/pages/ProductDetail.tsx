@@ -26,26 +26,27 @@ const ProductDetail: React.FC = () => {
 
   return (
     <div
-      className="flex w-screen md:h-screen justify-around max-md:flex-col
+      className="flex w-screen md:min-h-screen justify-around max-md:flex-col py-24
     "
     >
-      <div className="md:w-2/5 ">
+      <div className="md:w-2/5 content-center ">
         <img
           src={product.src}
           alt={product.title}
-          className="w-full self-center"
+          className="w-full animate__animated animate__jackInTheBox"
         />
       </div>
       <div className="md:w-2/5 self-center grid gap-8 max-md:p-8">
-        <h1 className=" text-3xl">{product.title}</h1>
-        <div className="grid gap-2">
-          <p>Precio: {product.price}</p>
-          <p>Descripción: {product.description}</p>
-          <p>Descripción extendida: {product.extendedDescription}</p>
+        <h1 className="font-semibold text-3xl tracking-wider">
+          {product.title}
+        </h1>
+        <div className="grid gap-4 text-slate-700">
+          <p>Precio docena: {product.price} usd</p>
+          <p>Descripción del producto: {product.extendedDescription}</p>
           <p>Ingredientes: {product.ingredients.join(", ")}</p>
           <p>Preparación: {product.preparation}</p>
         </div>
-        <button onClick={() => navigate("/products")}>
+        <button className="font-semibold" onClick={() => navigate("/products")}>
           Volver a la lista de productos
         </button>
       </div>

@@ -13,7 +13,7 @@ const HamburgerButton: React.FC<HamburgerButtonProps> = ({
   return (
     <div className="hamburger" onClick={onToggle}>
       <span
-        className={`bar ${isNavOpen ? "open #006829]" : "bg-black"}`}
+        className={`bar ${isNavOpen ? "open bg-[#006829]" : "bg-black"}`}
       ></span>
       <span className={`bar ${isNavOpen ? "open" : "bg-black"}`}></span>
       <span

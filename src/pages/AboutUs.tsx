@@ -6,7 +6,7 @@ import LQIPImage from "../components/common/LQIPImage";
 
 const AboutUs = () => {
   return (
-    <div className="flex max-md:flex-col">
+    <div className="flex max-md:flex-col md:min-h-screen">
       <LQIPImage
         classnames="max-md:h-dvh md:w-2/5 object-cover "
         lowRes={BANNER_LQ}
@@ -14,31 +14,38 @@ const AboutUs = () => {
         alt="banner"
       />
       <div className="flex flex-col gap-8 max-md:p-12 md:p-32 self-center">
-        <div className=" grid gap-4 ">
-          <p className="font-semibold text-xl">Our Story</p>
+        <div className=" grid gap-8 ">
+          <p className="font-semibold text-3xl tracking-wider">
+            Nuestra historia
+          </p>
           <p>
-            Since 2005, Hester has done more than refine an old tradition.
-            Guided by an international palate, we fuse unique pickling
-            techniques from around the world to create the most interesting
-            flavors and textures. Hester makes everything in small batches from
-            our home base in New York. To achieve optimal flavor, our products
-            age from three weeks to four months, making every pickle worth your
-            patience.
+            Desde hace más de 40 años, esta empresa colombiana ha hecho más que
+            preservar una tradición culinaria. Con un compromiso inquebrantable
+            con la calidad, se especializa en la producción de productos a base
+            de maíz, fusionando la sabiduría ancestral con los más altos
+            estándares de calidad. Cada uno de sus productos refleja la esencia
+            de Colombia, siendo el resultado de una cuidadosa selección de
+            ingredientes y un proceso de elaboración que prioriza la salud y el
+            bienestar. Reconocida y apreciada en todo el país, sus productos se
+            han convertido en sinónimo de confianza, sabor auténtico y nutrición
+            de primera.
           </p>
         </div>
 
-        <div className=" grid gap-4">
+        <div className=" grid gap-8">
           <p className="font-semibold text-xl">
-            Hester produces fresh, organic produce from local farmers in New
-            York. Even our spices are fresh. Just because pickling is a
-            preservation process doesn’t mean you can use dried-up thyme or
-            week-old asparagus that’s already a little spongy.
+            Estamos trayendo lo mejor de Colombia a Estados Unidos, compartiendo
+            un pedazo de nuestra rica cultura a través de nuestros productos.
+            Cada bocado refleja el sabor auténtico de nuestra gastronomía,
+            llevando la calidad y los sabores únicos de Colombia a nuevos
+            hogares y corazones.
           </p>
           <p>
-            We want to give our customers crisp, crunchy and delicious pickled
-            vegetables and fruits. Most of all, we want to expand people’s
-            palates and prove that pickles don’t always come in a green or red
-            variety.
+            Nuestros productos ofrecen lo mejor de la naturaleza, con
+            ingredientes frescos y completamente naturales, garantizando
+            alimentos deliciosos y nutritivos. Nos comprometemos a ofrecer
+            opciones saludables que nutren el cuerpo y el alma, manteniendo
+            siempre su frescura y autenticidad.
           </p>
         </div>
       </div>

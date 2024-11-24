@@ -29,13 +29,13 @@ const ContactForm: React.FC = () => {
 
   return (
     <form
-      action="https://formsubmit.co/devcontact.studio@gmail.com"
+      action="https://formsubmit.co/juandiaz@supercolombiana.com"
       method="POST"
       className="gap-2 flex flex-col md:w-1/3 self-center"
     >
       <div className="flex gap-2 flex-col lg:flex-row">
         <div className="flex flex-col">
-          <label htmlFor="firstName">First Name:</label>
+          <label htmlFor="firstName">Nombre</label>
           <input
             className="border-2 rounded-sm"
             type="text"
@@ -46,7 +46,7 @@ const ContactForm: React.FC = () => {
           />
         </div>
         <div className="flex flex-col">
-          <label htmlFor="lastName">Last Name:</label>
+          <label htmlFor="lastName">Apellido</label>
           <input
             className="border-2 rounded-sm"
             type="text"
@@ -58,7 +58,7 @@ const ContactForm: React.FC = () => {
         </div>
       </div>
       <div className="flex flex-col">
-        <label htmlFor="email">Email:</label>
+        <label htmlFor="email">Correo</label>
         <input
           className="border-2 rounded-sm"
           type="email"
@@ -70,7 +70,7 @@ const ContactForm: React.FC = () => {
       </div>
 
       <div className="flex flex-col">
-        <label htmlFor="message">Message:</label>
+        <label htmlFor="message">Mensaje</label>
         <textarea
           cols={20}
           rows={5}
@@ -81,6 +81,7 @@ const ContactForm: React.FC = () => {
           onChange={handleChange}
         />
       </div>
+      <input type="hidden" name="_next" value="http://localhost:3000/home" />
       <button
         className={`inline-block transition-all ease-linear duration-100 hover:bg-black hover:text-slate-50 border-2 border-black rounded-full h-fit py-2 px-12 ${
           !isValidEmail && "cursor-not-allowed opacity-50"
@@ -88,14 +89,13 @@ const ContactForm: React.FC = () => {
         type="submit"
         disabled={!isValidEmail}
       >
-        Submit
+        Enviar
       </button>
       {isValidEmail ? (
         <p></p>
       ) : (
-        <p className="text-red-600 text-sm">Email invalido</p>
+        <p className="text-red-600 text-sm">Correo invalido</p>
       )}
-      <input type="hidden" name="_next" value="http://localhost:3000/home" />
       <input type="hidden" name="_captcha" value="false" />
     </form>
   );

@@ -13,6 +13,11 @@ const router = createBrowserRouter([
     element: <Root />,
     children: [
       {
+        path: "",
+        element: <Home />,
+        index: true,
+      },
+      {
         path: "home",
         element: <Home />,
         index: true,

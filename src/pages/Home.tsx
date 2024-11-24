@@ -14,7 +14,7 @@ import LQIPImage from "../components/common/LQIPImage";
 const Home = () => {
   return (
     <div className="">
-      <div className={"overflow-hidden h-dvh items-center flex"}>
+      <div className={"overflow-hidden md:min-h-screen items-center flex"}>
         <LQIPImage
           lowRes={BANNER_AREPA_WIDE_LQ}
           highRes={BANNER_AREPA_WIDE}
@@ -31,9 +31,13 @@ const Home = () => {
       <div className="p-8 grid gap-8 items-center">
         <div className="grid text-center gap-8">
           <p className="font-semibold text-2xl">
-            Only the Highest Quality Ingredients
+            Solo los ingredientes de más alta calidad
           </p>
-          <p>In fact, we grow most of them ourselves on our 17-acre farm!</p>
+          <p>
+            ¡De hecho, producimos la mayoría de nuestros productos a base de
+            maíz utilizando métodos tradicionales y con un compromiso total con
+            la calidad y la frescura!
+          </p>
         </div>
         <div className="grid gap-16 md:grid-cols-3">
           <img

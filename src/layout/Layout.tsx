@@ -8,6 +8,8 @@ import LOGO_FOOTER from "../assets/logo-3.png";
 import "./Layout.css";
 import HamburgerButton from "../components/common/HamburguerButton/HamburguerButton";
 import Footer from "../components/footer/Footer";
+import ContactButton from "../components/common/ContactButton";
+import ScrollToTop from "../navigation/ScrollToTop";
 
 const Layout = ({ children }: any) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -31,14 +33,16 @@ const Layout = ({ children }: any) => {
   };
   return (
     <div>
+      <ScrollToTop />
+
       <div className="poppins">
         <Navbar
           id="header"
-          classname={` absolute p-6 md:px-6 md:px-14 flex-col	 z-10 text-black  grid-cols-3 md:grid-cols-3 flex justify-between md:grid gap-20 h-28 items-center w-screen transition-all duration-400  ease-in-out  ${
+          classname={` absolute p-6 md:px-6 md:px-14 flex-col	 z-10 text-black  grid-cols-3 md:grid-cols-6 flex justify-between md:grid gap-20 h-28 items-center  transition-all duration-400  ease-in-out  ${
             isNavOpen ? "h-dvh bg-[#94c11f] text-[#006829]" : ""
           }`}
         >
-          <div className="flex justify-between w-full 	md:order-2 ">
+          <div className="flex justify-between w-full  col-span-2">
             <Link to="/home">
               <Navbar.Brand classname={"h-10 col-span-3 col-start-5 flex "}>
                 <span className=" uppercase font-black leading-10 text-2xl mulish">
@@ -53,7 +57,7 @@ const Layout = ({ children }: any) => {
             </div>
           </div>
           <Navbar.Nav
-            classname={`col-span-2 h-full flex items-center md: ${
+            classname={`col-span-3 h-full flex items-center md: ${
               isNavOpen
                 ? "order-3 -translate-y-6 transition-all ease-in-out duration-1000 text-[#006829]"
                 : "translate-y-0 text-[#94c11f]"
@@ -92,7 +96,7 @@ const Layout = ({ children }: any) => {
               <li className=" place-content-center ">
                 <Link to="/products">Productos</Link>
               </li>
-              <li className="place-content-center ">
+              <li className="place-content-center whitespace-nowrap">
                 <Link to="/about">Nuestra Historia</Link>
               </li>
               <li className=" place-content-center  ">
@@ -160,6 +164,7 @@ const Layout = ({ children }: any) => {
             </ul>
           </Footer.ScMedia>
         </div>
+        <ContactButton />
       </Footer>
     </div>
   );

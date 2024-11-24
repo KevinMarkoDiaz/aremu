@@ -7,7 +7,7 @@ export const productsData = [
   {
     title: "Arepa de queso",
     price: "12$",
-    description: "Deliciosa arepa rellena de queso fresco y suave.",
+    description: "Deliciosa arepa rellena de queso fresco y suave",
     extendedDescription:
       "Una arepa gruesa, suave y deliciosa, rellena con queso fresco derretido y suave al gusto. Ideal para el desayuno.",
     ingredients: ["Arepa", "Queso fresco", "Aceite"],
@@ -18,7 +18,7 @@ export const productsData = [
   {
     title: "Empanada de queso",
     price: "12$",
-    description: "Empanada crujiente rellena con queso derretido y sabroso.",
+    description: "Empanada crujiente rellena con queso derretido y sabroso",
     extendedDescription:
       "Empanada frita, crujiente por fuera y suave por dentro, con queso derretido que le da un toque único de sabor.",
     ingredients: ["Masa", "Queso", "Aceite"],
@@ -29,7 +29,7 @@ export const productsData = [
   {
     title: "Arepa paisa",
     price: "12$",
-    description: "Arepa típica de la región paisa, con carne, queso y más.",
+    description: "Arepa típica de la región paisa, con carne, queso y más",
     extendedDescription:
       "Una arepa rellena de carne, queso y otros ingredientes típicos de la región paisa. Sabor auténtico y tradicional.",
     ingredients: ["Arepa", "Carne molida", "Queso", "Aceite", "Cebolla"],

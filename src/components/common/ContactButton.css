@@ -1,0 +1,27 @@
+/* Estilo para el enlace de WhatsApp */
+.whatsapp-link {
+    position: fixed;  /* Hace que el ícono quede fijo en la pantalla */
+    bottom: 20px;     /* Ubicación a 20px desde el borde inferior */
+    right: 20px;      /* Ubicación a 20px desde el borde derecho */
+    background-color: #25D366; /* Color verde de WhatsApp */
+    padding: 15px;    /* Da espacio alrededor del ícono */
+    border-radius: 50%; /* Hace el fondo redondo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Asegura que esté encima de otros elementos */
+  }
+  
+  /* Estilo para el ícono */
+  .whatsapp-link svg {
+    color: white; /* Color del ícono */
+  }
+  
+  /* Efecto hover */
+  .whatsapp-link:hover {
+    transform: scale(1.1); /* Aumenta el tamaño del ícono */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Aumenta la sombra */
+  }
+  
